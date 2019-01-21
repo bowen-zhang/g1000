@@ -1,0 +1,43 @@
+syntax = "proto3";
+
+message Config {
+	repeated Control controls = 1;
+}
+
+message Control {
+	oneof control_type {
+		TactileSwitch tactile_switch = 1;
+		RotarySwitch rotary_switch = 2;
+		DualRotarySwitch dual_rotary_switch = 3;
+	}
+}
+
+message TactileSwitch {
+	string name = 1;
+	int32 pin = 2;
+	int32 push_event_id = 3;
+}
+
+message RotarySwitch {
+	string name = 1;
+	int32 clk_pin = 2;
+	int32 dt_pin = 3;
+	int32 sw_pint = 4;
+	int32 increase_event_id = 5;
+	int32 decrease_event_id = 6;
+	int32 push_event_id = 7;
+}
+
+message DualRotarySwitch {
+	string name = 1;
+	int32 large_clk_pin = 2;
+	int32 large_dt_pin = 3;
+	int32 small_clk_pin = 4;
+	int32 small_dt_pin = 5;
+	int32 sw_pint = 6;
+	int32 large_increase_event_id = 7;
+	int32 large_decrease_event_id = 8;
+	int32 small_increase_event_id = 9;
+	int32 small_decrease_event_id = 10;
+	int32 push_event_id = 11;
+}
