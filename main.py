@@ -48,7 +48,6 @@ class App(pattern.Logger):
         yield control
       elif control_proto.HasField('rotary_encoder'):
         proto = control_proto.rotary_encoder
-        print proto
         self.logger.info('Initialize rotary encoder {0}...'.format(proto.name))
         control = encoder.RotaryEncoder(
             name=proto.name,

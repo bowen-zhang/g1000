@@ -1,84 +1,84 @@
 controls {
   tactile_switch {
     name: "Softkey 1"
-    pin: 21
+    pin: 8
     push_event_id: 0x11046
   }
 }
 controls {
   tactile_switch {
     name: "Softkey 2"
-    pin: 20
+    pin: 7
     push_event_id: 0x11047
   }
 }
 controls {
   tactile_switch {
     name: "Softkey 3"
-    pin: 16
+    pin: 12
     push_event_id: 0x11048
   }
 }
 controls {
   tactile_switch {
     name: "Softkey 4"
-    pin: 12
+    pin: 16
     push_event_id: 0x11049
   }
 }
 controls {
   tactile_switch {
     name: "Softkey 5"
-    pin: 7
+    pin: 20
     push_event_id: 0x11050
   }
 }
 controls {
   tactile_switch {
     name: "Softkey 6"
-    pin: 8
+    pin: 21
     push_event_id: 0x11051
   }
 }
 controls {
   tactile_switch {
     name: "Softkey 7"
-    pin: 25
+    pin: 14
     push_event_id: 0x11052
   }
 }
 controls {
   tactile_switch {
     name: "Softkey 8"
-    pin: 24
+    pin: 15
     push_event_id: 0x11053
   }
 }
 controls {
   tactile_switch {
     name: "Softkey 9"
-    pin: 23
+    pin: 18
     push_event_id: 0x11054
   }
 }
 controls {
   tactile_switch {
     name: "Softkey 10"
-    pin: 18
+    pin: 23
     push_event_id: 0x11055
   }
 }
 controls {
   tactile_switch {
     name: "Softkey 11"
-    pin: 15
+    pin: 24
     push_event_id: 0x11056
   }
 }
 controls {
   tactile_switch {
     name: "Softkey 12"
-    pin: 14
+    pin: 25
     push_event_id: 0x11057
   }
 }
