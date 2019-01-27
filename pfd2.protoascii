@@ -70,10 +70,10 @@ controls {
     small_clk_pin: 7
     small_dt_pin: 8
     sw_pin: 20
-    large_increase_event_id: 0x11022
-    large_decrease_event_id: 0x11023
-    small_increase_event_id: 0x11025
-    small_decrease_event_id: 0x11026
+    large_increase_event_id: 0x11025
+    large_decrease_event_id: 0x11026
+    small_increase_event_id: 0x11022
+    small_decrease_event_id: 0x11023
     push_event_id: 0x11024
   }
 }
