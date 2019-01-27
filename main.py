@@ -43,7 +43,7 @@ class App(pattern.Logger):
       if control_proto.HasField('tactile_switch'):
         proto = control_proto.tactile_switch
         self.logger.info('Initialize tactile switch {0}...'.format(proto.name))
-        control = switch.TactileSwitch(name=proto.name, pin=proto.pin)
+        control = switch.PushSwitch(name=proto.name, pin=proto.pin)
         control.on('push', self._create_trigger(proto.push_event_id))
         yield control
       elif control_proto.HasField('rotary_encoder'):

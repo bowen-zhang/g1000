@@ -2,91 +2,91 @@ controls {
   tactile_switch {
     name: "Softkey 1"
     pin: 8
-    push_event_id: 0x11046
+    push_event_id: 0x11128
   }
 }
 controls {
   tactile_switch {
     name: "Softkey 2"
     pin: 7
-    push_event_id: 0x11047
+    push_event_id: 0x11129
   }
 }
 controls {
   tactile_switch {
     name: "Softkey 3"
     pin: 12
-    push_event_id: 0x11048
+    push_event_id: 0x1112A
   }
 }
 controls {
   tactile_switch {
     name: "Softkey 4"
     pin: 16
-    push_event_id: 0x11049
+    push_event_id: 0x1112B
   }
 }
 controls {
   tactile_switch {
     name: "Softkey 5"
     pin: 20
-    push_event_id: 0x11050
+    push_event_id: 0x1112C
   }
 }
 controls {
   tactile_switch {
     name: "Softkey 6"
     pin: 21
-    push_event_id: 0x11051
+    push_event_id: 0x1112D
   }
 }
 controls {
   tactile_switch {
     name: "Softkey 7"
     pin: 14
-    push_event_id: 0x11052
+    push_event_id: 0x1112E
   }
 }
 controls {
   tactile_switch {
     name: "Softkey 8"
     pin: 15
-    push_event_id: 0x11053
+    push_event_id: 0x1112F
   }
 }
 controls {
   tactile_switch {
     name: "Softkey 9"
     pin: 18
-    push_event_id: 0x11054
+    push_event_id: 0x11130
   }
 }
 controls {
   tactile_switch {
     name: "Softkey 10"
     pin: 23
-    push_event_id: 0x11055
+    push_event_id: 0x11131
   }
 }
 controls {
   tactile_switch {
     name: "Softkey 11"
     pin: 24
-    push_event_id: 0x11056
+    push_event_id: 0x11132
   }
 }
 controls {
   tactile_switch {
     name: "Softkey 12"
     pin: 25
-    push_event_id: 0x11057
+    push_event_id: 0x11133
   }
 }
 controls {
   tactile_switch {
-    name: "NAV Activation"
+    name: "NAV Toggle"
     pin: 2
-    push_event_id: 0x11058
+    push_event_id: 0x11100
   }
 }
 controls {
@@ -97,11 +97,11 @@ controls {
     small_clk_pin: 22
     small_dt_pin: 27
     sw_pin: 3
-    large_increase_event_id: 0x11002
-    large_decrease_event_id: 0x11003
-    small_increase_event_id: 0x11004
-    small_decrease_event_id: 0x11005
-    push_event_id: 0x11006
+    large_increase_event_id: 0x11101
+    large_decrease_event_id: 0x11102
+    small_increase_event_id: 0x11103
+    small_decrease_event_id: 0x11104
+    push_event_id: 0x11105
   }
 }
 controls {
