@@ -1,0 +1,94 @@
+controls {
+  tactile_switch {
+    name: "Direct"
+    pin: 6
+    push_event_id: 0x1111C
+  }
+}
+controls {
+  tactile_switch {
+    name: "Menu"
+    pin: 5
+    push_event_id: 0x1111D
+  }
+}
+controls {
+  tactile_switch {
+    name: "FPL"
+    pin: 19
+    push_event_id: 0x1111E
+  }
+}
+controls {
+  tactile_switch {
+    name: "PROC"
+    pin: 13
+    push_event_id: 0x1111F
+  }
+}
+controls {
+  tactile_switch {
+    name: "CLR"
+    pin: 21
+    push_event_id: 0x11120
+  }
+}
+controls {
+  tactile_switch {
+    name: "ENT"
+    pin: 26
+    push_event_id: 0x11122
+  }
+}
+controls {
+  tactile_switch {
+    name: "COM Activation"
+    pin: 14
+    push_event_id: 0x11015
+  }
+}
+controls {
+  dual_rotary_encoder {
+    name: "COM"
+    large_clk_pin: 18
+    large_dt_pin: 15
+    small_clk_pin: 24
+    small_dt_pin: 23
+    sw_pin: 25
+    large_increase_event_id: 0x11108
+    large_decrease_event_id: 0x11109
+    small_increase_event_id: 0x1110A
+    small_decrease_event_id: 0x1110B
+    push_event_id: 0x1110C
+  }
+}
+controls {
+  dual_rotary_encoder {
+    name: "CRS/BARO"
+    large_clk_pin: 16
+    large_dt_pin: 12
+    small_clk_pin: 8
+    small_dt_pin: 7
+    sw_pin: 20
+    large_increase_event_id: 0x1110D
+    large_decrease_event_id: 0x1110E
+    small_increase_event_id: 0x11022
+    small_decrease_event_id: 0x11023
+    push_event_id: 0x11024
+  }
+}
+controls {
+  dual_rotary_encoder {
+    name: "FMS"
+    large_clk_pin: 11
+    large_dt_pin: 9
+    small_clk_pin: 22
+    small_dt_pin: 10
+    sw_pin: 27
+    large_increase_event_id: 0x11123
+    large_decrease_event_id: 0x11124
+    small_increase_event_id: 0x11125
+    small_decrease_event_id: 0x11126
+    push_event_id: 0x11127
+  }
+}
