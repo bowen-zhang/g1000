@@ -84,9 +84,9 @@ controls {
 }
 controls {
   tactile_switch {
-    name: "NAV Activation"
+    name: "NAV Toggle"
     pin: 2
-    push_event_id: 0x11058
+    push_event_id: 0x11001
   }
 }
 controls {
