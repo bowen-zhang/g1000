@@ -1,6 +1,7 @@
 import gflags
 import grpc
 import logging
+import Queue
 
 from RPi import GPIO
 
@@ -24,6 +25,8 @@ gflags.DEFINE_string('config', None, 'Path to configuration file.')
 
 
 class App(pattern.Logger):
+  _MAX_QUEUE_SIZE = 10
+
   def __init__(self, sim_proxy_uri, config_path, *args, **kwargs):
     super(App, self).__init__(*args, **kwargs)
     if sim_proxy_uri:
@@ -32,6 +35,7 @@ class App(pattern.Logger):
     else:
       self._sim_proxy = None
 
+    self._events = Queue.Queue(maxsize=self._MAX_QUEUE_SIZE)
     self._controls = list(self._init_controls(config_path))
 
   def _init_controls(self, config_path):
@@ -82,19 +86,32 @@ class App(pattern.Logger):
 
   def _create_trigger(self, event_id):
     def _trigger():
-      if self._sim_proxy:
-        self.logger.info('Triggering event {0:02X}...'.format(event_id))
-        try:
-          self._sim_proxy.TriggerEvent(SimProxy_pb2.EventDefinition(id=event_id))
-        except:
-          self.logger.error('Failed to send event.')
+      try:
+        self._events.put(event_id, block=False)
+      except Queue.Full:
+        logging.warn('Event is dropped as event queue is full.')
     return _trigger
+
+  def _send_events(self):
+    try:
+      event_id = self._events.get(block=True, timeout=1)
+      self.logger.info('Triggering event {0:02X}...'.format(event_id))
+      try:
+        self._sim_proxy.TriggerEvent(SimProxy_pb2.EventDefinition(id=event_id))
+      except:
+        self.logger.error('Failed to send event.')
+    except Queue.Empty:
+      pass
 
   def run(self):
     self.logger.info('Running...')
     try:
-      while True:
-        sleep(1)
+      if self._sim_proxy:
+        while True:
+          self._send_events()
+      else:
+        while True:
+          sleep(1)
     finally:
       GPIO.cleanup()
 
